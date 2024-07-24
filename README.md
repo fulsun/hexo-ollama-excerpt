@@ -36,10 +36,10 @@ ollamaexcerpt:
 
 # 特别文章不摘要
 
-在文章头部 添加 `aiexcerpt: false`
+在文章头部 添加 `ai_enable: false`
 
 ```markdown
 ---
-aiexcerpt: false
+ai_enable: false
 ---
 ```
