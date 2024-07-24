@@ -3,7 +3,7 @@
   "description": "hexo ollama 生成文章摘要",
   "author": "空巷一人",
   "license": "MIT",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "main": "./dist/index.cjs",
   "types": "./index.d.ts",

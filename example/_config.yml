@@ -109,9 +109,3 @@ ollamaexcerpt:
   model: Tianli0/tianligpt-5w-1.5b
   prompt: '你是一个摘要生成工具，你需要解释我发送给你的内容，不要换行，不要超过200字，只需要介绍文章的内容，不需要提出建议和缺少的东西。请用中文回答，输出的内容开头为“这篇文章介绍了”'
   ignoreEl: ['table', 'pre', 'figure']
-
-excerpt:
-  enable: true # 是否启用，默认为 true
-  title: '空巷摘要' # 标题，默认为 '作者名+导读'
-  caret: '_' # 打字动画光标，默认为 '⬤'
-  cps: 20 # 每秒打字速度，默认为 20

@@ -9,6 +9,9 @@ highlight_theme: mac #  darker / pale night / light / ocean / mac / mac light / 
 inject:
   head:
     - <link rel="stylesheet" href="/css/ai.css">
+  bottom:
+    - <script>let tianliGPT_postSelector = '\#post \#article-container';</script>
+    - <script src="/js/tianli_gpt.min.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
