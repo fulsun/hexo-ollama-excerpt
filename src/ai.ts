@@ -9,7 +9,7 @@ export default async function ai(
   const ollama = new Ollama({ host: api ?? 'http://127.0.0.1:11434' });
 
   const response = await ollama.chat({
-    model: model ?? 'qwen2:latest',
+    model: model ?? 'Tianli0/tianligpt-5w-1.5b',
     messages: [
       {
         role: 'system',
