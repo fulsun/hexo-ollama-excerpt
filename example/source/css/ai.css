@@ -1,0 +1,17 @@
+#summary {
+  .highlight-tools {
+    display: none;
+  }
+  figcaption span {
+    padding: 4px 0.5rem;
+    display: block;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: var(--block-hover);
+  }
+  .summary-content {
+    margin: 0;
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+  }
+}

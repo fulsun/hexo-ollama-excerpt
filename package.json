@@ -1,0 +1,52 @@
+{
+  "name": "hexo-ollama-excerpt",
+  "description": "hexo ollama 生成文章摘要",
+  "author": "空巷一人",
+  "license": "MIT",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "types": "./index.d.ts",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "homepage": "https://github.com/kongxiangyiren/hexo-ollama-excerpt#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com"
+  },
+  "bugs": {
+    "url": "https://github.com/kongxiangyiren/hexo-ollama-excerpt/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kongxiangyiren/hexo-ollama-excerpt.git"
+  },
+  "keywords": [
+    "hexo",
+    "ollama",
+    "excerpt"
+  ],
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "prepare": "vite build",
+    "dev": "vite build -w --mode dev",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.4",
+    "@types/html-to-text": "^9.0.4",
+    "@types/node": "^20.14.12",
+    "hexo": "^7.3.0",
+    "typescript": "^5.5.4",
+    "vite": "^5.3.4",
+    "vite-copy-plugin": "^0.4.0",
+    "vite-plugin-node": "^3.1.0"
+  },
+  "dependencies": {
+    "html-to-text": "^9.0.5",
+    "ollama": "^0.5.6"
+  }
+}
