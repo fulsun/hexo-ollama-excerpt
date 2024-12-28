@@ -20,7 +20,8 @@ ollama pull qwen2:latest
 # 安装 hexo-ollama-excerpt
 
 ```sh
-yarn add hexo-ollama-excerpt
+# yarn add hexo-ollama-excerpt
+yarn add  https://github.com/username/example-repo.git#v1.0.0
 ```
 
 # 在 config.yaml 配置
@@ -32,6 +33,7 @@ ollamaexcerpt:
   model: Tianli0/tianligpt-5w-1.5b # 使用的模型
   prompt: '你是一个摘要生成工具，你需要解释我发送给你的内容，不要换行，不要超过200字，只需要介绍文章的内容，不需要提出建议和缺少的东西。请用中文回答，输出的内容开头为“这篇文章介绍了”' #提示词
   ignoreEl: ['table', 'pre', 'figure'] # 要排除的 content 内容
+  tagname: description # 输出的摘要标签名
 ```
 
 # 特别文章不摘要

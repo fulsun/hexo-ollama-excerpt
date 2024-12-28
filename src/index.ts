@@ -7,15 +7,15 @@ const config = hexo.config.ollamaexcerpt;
 const log = hexo.log;
 hexo.extend.filter.register('after_post_render', async function (data) {
   if (config.default_enable) data.ai_enable = data.ai_enable === false ? false : true;
-
-  if (!data.ai_enable || data.aiexcerpt) return data;
+  var tagname = config.tagname ?? 'description';
+  if (!data.ai_enable || data[tagname]) return data;
 
   const content = strip(data.content, config.ignoreEl);
   log.info(`摘要 ${data.title} 完成`);
   const path = hexo.source_dir + data.source;
   const frontMatter = fm.parse(await fs.readFile(path));
 
-  frontMatter.aiexcerpt = data.aiexcerpt = await ai(
+  frontMatter[tagname] = data[tagname] = await ai(
     config.api,
     config.model,
     content,
@@ -26,6 +26,7 @@ hexo.extend.filter.register('after_post_render', async function (data) {
 });
 
 hexo.extend.filter.register('after_post_render', function (data) {
-  if (data.ai_enable && data.aiexcerpt)
-    return (data.content = data.content + `<script>var aiexcerpt="${data.aiexcerpt}"</script>`);
+  var tagname = config.tagname ?? 'description';
+  if (data.ai_enable && data[tagname])
+    return (data.content = data.content + `<script>var description="${data[tagname]}"</script>`);
 });
