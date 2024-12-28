@@ -21,7 +21,7 @@ ollama pull qwen2:latest
 
 ```sh
 # yarn add hexo-ollama-excerpt
-yarn add  https://github.com/username/example-repo.git#v1.0.0
+yarn add https://github.com/fulsun/hexo-ollama-excerpt.git#v1.0.0
 ```
 
 # 在 config.yaml 配置
